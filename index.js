@@ -44,6 +44,7 @@ app.post("/api/createorder",controller.CreateOrder)
 app.get("/api/getorder",controller.findOrder)
 app.post("/api/updateorder/:id",controller.updateOrder)
 app.delete('/api/deleteorder/:id',controller.CencelOrder)
+app.delete("/api/deleteblogs/:id",controller.DeleteBlog)
 app.listen(PORT,()=>{
     console.log(`Server is runnig on ${PORT}` );
 })
