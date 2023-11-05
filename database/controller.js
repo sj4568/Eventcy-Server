@@ -164,6 +164,13 @@ exports.updateBlogs = (req,res) =>
      .then(blog=>res.send(blog))
      .catch(err=>console.log(err))
 }
+exports.DeleteBlog = (req, res) => {
+    const id = req.params.id
+    Blogs.findByIdAndDelete(id)
+        .then(blog => res.send(blog))
+        .catch(err => console.log(err))
+    
+}
 exports.CreateOrder = (req,res) =>
 {
     Order.create(req.body)
